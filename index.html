@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Web Studio — сучасні веб-рішення: лендінги, сайти-візитки, корпоративні сайти</title>
+  <meta name="description" content="Web Studio — невелика, але амбітна вебстудія. Створюємо стильні, швидкі та адаптивні лендінги, сайти-візитки та корпоративні сайти.">
+  <meta name="theme-color" content="#050506">
+  <meta property="og:title" content="Web Studio — сучасні веб-рішення">
+  <meta property="og:description" content="Односторінкові сайти, лендінги, презентаційні сторінки та інші цифрові продукти.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="gSilver" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#fff" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="gRed" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff1e2d" stop-opacity="0"/>
+      <stop offset=".55" stop-color="#ff1e2d" stop-opacity=".95"/>
+      <stop offset="1" stop-color="#ff1e2d" stop-opacity="0"/>
+    </linearGradient>
+    <symbol id="logo" viewBox="0 0 64 64">
+      <path d="M8 16 L20 48 L32 26" fill="none" stroke="#fff" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M32 26 L44 48 L56 16" fill="none" stroke="#ff1e2d" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M26 16 L32 26 L38 16" fill="none" stroke="#fff" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round" opacity=".9"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="container header__in">
+    <a href="#top" class="logo" aria-label="Web Studio — на початок">
+      <svg class="logo__mark"><use href="#logo"/></svg>
+      <span class="logo__text">Web Studio</span>
+    </a>
+    <nav class="nav" aria-label="Головна навігація" data-i18n-aria="navAria">
+      <a href="#about" data-i18n="navAbout">Про нас</a>
+      <a href="#services" data-i18n="navServices">Послуги</a>
+      <a href="#process" data-i18n="navProcess">Процес</a>
+      <a href="#contact" data-i18n="navContact">Контакти</a>
+    </nav>
+    <div class="header__actions">
+      <a href="#contact" class="btn btn--ghost header__cta" data-contact><span data-i18n="writeUs">Написати нам</span> <span class="arr">→</span></a>
+      <div class="lang-switch" aria-label="Мова сайту" data-i18n-aria="langAria">
+        <button type="button" data-lang="uk" aria-label="Українська">UA</button>
+        <button type="button" data-lang="en" aria-label="English">EN</button>
+        <button type="button" data-lang="de" aria-label="Deutsch">DE</button>
+        <button type="button" data-lang="ru" aria-label="Русский">RU</button>
+      </div>
+    </div>
+    <button class="burger" id="burger" aria-label="Відкрити меню" aria-expanded="false" aria-controls="mobileNav" data-i18n-aria="openMenu">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mnav" id="mobileNav" aria-hidden="true">
+  <nav class="mnav__in" aria-label="Мобільна навігація" data-i18n-aria="mobileNavAria">
+    <a href="#about" data-i18n="navAbout">Про нас</a>
+    <a href="#services" data-i18n="navServices">Послуги</a>
+    <a href="#process" data-i18n="navProcess">Процес</a>
+    <a href="#contact" data-i18n="navContact">Контакти</a>
+    <div class="lang-switch lang-switch--mobile" aria-label="Мова сайту" data-i18n-aria="langAria">
+      <button type="button" data-lang="uk" aria-label="Українська">UA</button>
+      <button type="button" data-lang="en" aria-label="English">EN</button>
+      <button type="button" data-lang="de" aria-label="Deutsch">DE</button>
+      <button type="button" data-lang="ru" aria-label="Русский">RU</button>
+    </div>
+    <a href="#contact" class="btn btn--primary" data-contact><span data-i18n="writeUs">Написати нам</span> <span class="arr">→</span></a>
+  </nav>
+</div>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__bg" aria-hidden="true">
+      <svg class="waves waves--hero" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" data-parallax="0.12">
+        <ellipse cx="1060" cy="330" rx="520" ry="190" transform="rotate(-18 1060 330)" fill="none" stroke="url(#gSilver)" stroke-width="1.6"/>
+        <ellipse cx="1080" cy="350" rx="600" ry="230" transform="rotate(-22 1080 350)" fill="none" stroke="url(#gRed)" stroke-width="1.2" opacity=".8"/>
+        <path d="M-50 760 C 350 560, 700 880, 1500 420" fill="none" stroke="url(#gSilver)" stroke-width="1.4"/>
+        <path d="M-50 800 C 400 640, 800 900, 1500 520" fill="none" stroke="url(#gRed)" stroke-width="2"/>
+        <path d="M600 -20 C 760 120, 1000 80, 1500 -40" fill="none" stroke="url(#gRed)" stroke-width="2.4"/>
+      </svg>
+      <div class="glow glow--hero"></div>
+    </div>
+
+    <div class="container hero__grid">
+      <div class="hero__text">
+        <span class="badge reveal"><i></i>Web Studio</span>
+        <h1 class="hero__title">
+          <span class="line"><span data-i18n="heroLine1">Створюємо</span></span>
+          <span class="line"><span data-i18n="heroLine2">сучасні</span></span>
+          <span class="line"><span class="red" data-i18n="heroLine3">веб&#8209;рішення.</span></span>
+        </h1>
+        <p class="hero__sub reveal" data-i18n="heroSub">Односторінкові сайти, лендінги, презентаційні сторінки та інші цифрові продукти.</p>
+        <a href="#contact" class="btn btn--primary btn--lg reveal" data-contact><span data-i18n="discussProject">Обговорити проєкт</span> <span class="arr">→</span></a>
+      </div>
+
+      <div class="hero__visual" aria-hidden="true">
+        <div class="mac-scene">
+          <div class="mac-glow"></div>
+          <div class="mac">
+            <div class="mac__lid">
+              <div class="mac__bezel">
+                <div class="mac__cam"></div>
+                <div class="screen">
+                  <div class="s-nav"><b></b><span></span><span></span><span></span><em></em></div>
+                  <div class="s-hero">
+                    <div class="s-text">
+                      <i class="s-pill"></i>
+                      <h4>Ваш бренд.<br><u>Новий рівень.</u></h4>
+                      <p></p><p class="short"></p>
+                      <span class="s-btn"></span>
+                    </div>
+                    <div class="s-orb"></div>
+                  </div>
+                  <div class="s-cards"><i></i><i></i><i></i></div>
+                </div>
+              </div>
+              <div class="mac__logo"></div>
+            </div>
+            <div class="mac__base"><div class="mac__notch"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-ind" aria-label="Прокрутити до розділу «Про нас»" data-i18n-aria="scrollAbout">
+      <span class="mouse"><i></i></span>
+    </a>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about" id="about">
+    <div class="container about__grid">
+      <div class="about__text">
+        <span class="badge reveal"><i></i><span data-i18n="navAbout">Про нас</span></span>
+        <h2 class="h2 reveal"><span data-i18n="aboutTitle1">Про</span> <span class="red" data-i18n="aboutTitle2">нас</span></h2>
+        <p class="lead reveal" data-i18n="aboutLead">Ми — невелика, але амбітна вебстудія, яка створює стильні, швидкі та ефективні вебпродукти.</p>
+        <p class="reveal" data-i18n="aboutP1">Працюємо з ідеями, перетворюючи їх на сучасні сайти, які допомагають бізнесу розвиватися.</p>
+        <p class="reveal" data-i18n="aboutP2">Прагнемо створювати якісні цифрові рішення, вдосконалюватися та поступово розвивати власну команду.</p>
+      </div>
+      <div class="glass about__card reveal" data-tilt>
+        <svg class="card-waves" viewBox="0 0 600 340" preserveAspectRatio="xMidYMid slice" aria-hidden="true" data-parallax-inner>
+          <path d="M-20 330 C 120 80, 380 -40, 640 60" fill="none" stroke="url(#gSilver)" stroke-width="2"/>
+          <path d="M-20 350 C 160 140, 420 20, 640 120" fill="none" stroke="url(#gSilver)" stroke-width="1.2" opacity=".7"/>
+          <path d="M60 340 C 220 200, 420 160, 640 220" fill="none" stroke="url(#gRed)" stroke-width="2.4"/>
+          <path d="M-20 300 C 100 200, 260 190, 420 250" fill="none" stroke="url(#gRed)" stroke-width="1" opacity=".7"/>
+        </svg>
+        <span class="spark" aria-hidden="true"></span>
+        <p class="card-words"><span data-i18n="quality">Якість.</span><br><span data-i18n="design">Дизайн.</span><br><span data-i18n="result">Результат.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section services" id="services">
+    <div class="bg-waves bg-waves--right" aria-hidden="true">
+      <svg viewBox="0 0 800 500" preserveAspectRatio="xMaxYMid slice" data-parallax="0.08">
+        <path d="M100 500 C 300 260, 560 140, 820 120" fill="none" stroke="url(#gSilver)" stroke-width="1.6"/>
+        <path d="M200 520 C 380 320, 600 220, 820 230" fill="none" stroke="url(#gRed)" stroke-width="2.2"/>
+      </svg>
+    </div>
+    <div class="container">
+      <span class="badge reveal"><i></i><span data-i18n="navServices">Послуги</span></span>
+      <h2 class="h2 reveal"><span data-i18n="servicesTitle1">Що ми</span> <span class="red" data-i18n="servicesTitle2">робимо</span></h2>
+      <p class="sub reveal" data-i18n="servicesSub">Розробляємо вебрішення, які працюють на ваш бізнес.</p>
+
+      <div class="cards">
+        <article class="glass card reveal">
+          <span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>
+          </span>
+          <h3 data-i18n="landingTitle">Лендінги</h3>
+          <p data-i18n="landingText">Стильні односторінкові сайти для презентації послуг, продуктів і залучення клієнтів.</p>
+        </article>
+        <article class="glass card reveal">
+          <span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3 9.5h18"/><circle cx="6.2" cy="7.3" r=".6"/><circle cx="8.6" cy="7.3" r=".6"/></svg>
+          </span>
+          <h3 data-i18n="businessTitle">Сайти-візитки</h3>
+          <p data-i18n="businessText">Сучасні сайти для особистого бренду, спеціаліста чи бізнесу.</p>
+        </article>
+        <article class="glass card reveal">
+          <span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="4" y="4" width="6.5" height="6.5" rx="1.4"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.4"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.4"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.4"/></svg>
+          </span>
+          <h3 data-i18n="corporateTitle">Корпоративні сайти</h3>
+          <p data-i18n="corporateText">Повноцінне представлення компанії, її послуг та можливостей.</p>
+        </article>
+        <article class="glass card reveal">
+          <span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2.4"/><path d="M10.5 18.5h3"/></svg>
+          </span>
+          <h3 data-i18n="responsiveTitle">Адаптивний дизайн</h3>
+          <p data-i18n="responsiveText">Зручний і сучасний вигляд сайту на будь-якому пристрої.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section process" id="process">
+    <div class="container process__grid">
+      <div class="process__main">
+        <span class="badge reveal"><i></i><span data-i18n="navProcess">Процес</span></span>
+        <h2 class="h2 reveal"><span data-i18n="processTitle1">Як ми</span> <span class="red" data-i18n="processTitle2">працюємо</span></h2>
+        <p class="sub reveal" data-i18n="processSub">Проста схема для максимального результату.</p>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="num">01</span>
+            <div><h3 data-i18n="step1Title">Обговорюємо ідею</h3><p data-i18n="step1Text">Знайомимося із завданням та визначаємо цілі майбутнього сайту.</p></div>
+          </li>
+          <li class="step reveal">
+            <span class="num">02</span>
+            <div><h3 data-i18n="step2Title">Створюємо дизайн</h3><p data-i18n="step2Text">Продумуємо структуру, стиль та зовнішній вигляд сторінок.</p></div>
+          </li>
+          <li class="step reveal">
+            <span class="num">03</span>
+            <div><h3 data-i18n="step3Title">Розробляємо сайт</h3><p data-i18n="step3Text">Перетворюємо дизайн на повноцінний адаптивний вебсайт.</p></div>
+          </li>
+          <li class="step reveal">
+            <span class="num">04</span>
+            <div><h3 data-i18n="step4Title">Тестуємо та запускаємо</h3><p data-i18n="step4Text">Перевіряємо роботу сайту, виправляємо помилки та готуємо його до запуску.</p></div>
+          </li>
+        </ol>
+      </div>
+
+      <aside class="glass process__card reveal" data-tilt>
+        <svg class="card-waves" viewBox="0 0 400 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <path d="M-20 340 C 120 220, 260 300, 420 140" fill="none" stroke="url(#gSilver)" stroke-width="1.6"/>
+          <path d="M-20 370 C 140 260, 280 330, 420 200" fill="none" stroke="url(#gRed)" stroke-width="2.2"/>
+        </svg>
+        <span class="spark" aria-hidden="true"></span>
+        <p class="card-words card-words--sm"><span data-i18n="transparent">Прозорий процес.</span><br><span data-i18n="deadlines">Чіткі терміни.</span><br><span data-i18n="support">Підтримка після запуску.</span></p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="glass panel reveal">
+        <svg class="panel__waves" viewBox="0 0 1200 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <path d="M-20 340 C 260 180, 520 380, 1220 120" fill="none" stroke="url(#gSilver)" stroke-width="1.6"/>
+          <path d="M-20 360 C 300 240, 640 380, 1220 220" fill="none" stroke="url(#gRed)" stroke-width="2.4"/>
+          <path d="M700 -10 C 860 100, 1000 40, 1220 -10" fill="none" stroke="url(#gRed)" stroke-width="1.4" opacity=".7"/>
+        </svg>
+        <div class="panel__text">
+          <span class="badge badge--sm"><i></i><span data-i18n="navContact">Контакти</span></span>
+          <h2 class="h2 h2--panel"><span data-i18n="contactTitle1">Давайте створимо</span><br><span data-i18n="contactTitle2">щось круте</span> <span class="red" data-i18n="contactTitle3">разом.</span></h2>
+          <p data-i18n="contactText">Напишіть нам — і ми обговоримо вашу ідею та знайдемо найкраще рішення для вашого проєкту.</p>
+        </div>
+        <div class="panel__actions">
+          <a href="#" class="btn btn--primary btn--lg" id="mainContactBtn"><span data-i18n="writeUs">Написати нам</span> <span class="arr">→</span></a>
+          <div class="socials" role="list">
+            <a href="#" class="soc" data-soc="telegram" role="listitem" aria-label="Telegram">
+              <svg viewBox="0 0 24 24"><path d="M21.5 3.5 2.8 10.7c-.9.4-.9 1.1-.2 1.3l4.7 1.5 1.8 5.5c.2.6.4.8.8.8.4 0 .6-.2.9-.5l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.9-1.4-1.5ZM8.2 13l9.4-5.9c.4-.3.8-.1.5.2l-7.7 7-.3 3.2z"/></svg>
+            </a>
+            <a href="#" class="soc" data-soc="instagram" role="listitem" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" class="stroke"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".7"/></svg>
+            </a>
+            <a href="#" class="soc" data-soc="email" role="listitem" aria-label="Email">
+              <svg viewBox="0 0 24 24" class="stroke"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7.5 8 6 8-6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer__line" aria-hidden="true"></div>
+  <div class="container footer__in">
+    <div class="footer__left">
+      <a href="#top" class="logo" aria-label="На початок">
+        <svg class="logo__mark"><use href="#logo"/></svg>
+      </a>
+      <span class="copy">© 2026 Web Studio</span>
+    </div>
+    <p class="footer__tag"><span data-i18n="footerTag">Створюємо майбутнє разом.</span> <i class="dot" aria-hidden="true"></i></p>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
